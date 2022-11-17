@@ -1,0 +1,122 @@
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="n"></div>
+<div class="g"></div>
+
+<style>
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0); background-color: yellow; }
+    50% { transform: rotate(1turn); background-color: gold; }
+    100% { transform: rotate(2turn); background-color: yellow; }
+  }
+
+  div {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    left: calc(50% - 60px);
+    top: calc(50% - 60px);
+    width: 120px;
+    height: 120px;
+    background-color: yellow;
+  }
+
+  div:nth-child(1) {
+    animation-duration: 2s;
+    border-radius: 0 0 0 0;
+    width: 50px;
+  }
+
+  div:nth-child(2) {
+    animation-duration: 2s;
+    border-radius: 0 0 0 0;
+    height: 40px;
+    width: 50px;
+    margin-top: 70px;
+  }
+
+  div:nth-child(3) {
+    animation-duration: 1s;
+    border-radius: 60px 60px 60px 60px;
+  }
+
+  div:nth-child(4) {
+    animation-duration: 2s;
+    border-radius: 60px 20px 20px 60px;
+  }
+
+  div:nth-child(5) {
+    animation-duration: 3s;
+    border-radius: 0 60px 60px 0;
+  }
+
+  div:nth-child(6) {
+    animation-duration: 1s;
+    border-radius: 0 0 0 0;
+    width: 50px;
+  }
+
+  .n {
+    width: 30px;
+    height: 120px;
+    background-color: gold;
+    position: relative;
+  }
+
+  .n::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 120px;
+    background-color: gold;
+    position: absolute;
+    transform: translate(37px) rotate(-30deg);
+  }
+
+  .n::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 120px;
+    background-color: gold;
+    position: absolute;
+    transform: translate(75px);
+  }
+
+  .g {
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    border-width: 30px;
+    border-color: orange;
+    border-style: solid none solid solid;
+    border-radius: 60px 0 0 60px;
+    transform: rotate(-33deg);
+  }
+
+  .g::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 40px;
+    background-color: orange;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+</style>
